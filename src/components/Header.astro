@@ -1,11 +1,119 @@
 ---
-
+import "../styles/global.css";
 ---
 
-<header>
-  <h1 class="site-title">
+<header id="header" class="wrapper">
+  <h1>
     <a href="index.html">
-      <img src="src/img/logo.svg" alt="Furniture Design" />
+      <img src="/img/logo.svg" alt="Furniture Design" />
     </a>
   </h1>
+  <nav id="navi">
+    <ul class="nav-menu">
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="company.html">COMPANY</a></li>
+      <li><a href="mailto:xxxxx@xxx.xxx?subject=お問い合わせ">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <div class="toggle_btn">
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="mask"></div>
+
+  <script src="/scripts/menu.js" defer></script>
 </header>
+
+<style>
+  #header {
+    width: 100vw; /* ビューポートの横幅いっぱい */
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0 40px; /* 必要に応じて余白を調整 */
+    box-sizing: border-box; /* padding を含めて width を計算 */
+  }
+
+  /* ハンバーガメニュー */
+  #navi {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    color: #fff;
+    padding: 36px 50px;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+  }
+  #navi a {
+    color: #fff;
+  }
+  #navi li {
+    margin-bottom: 14px;
+  }
+  .open #navi {
+    left: 0;
+    opacity: 1;
+  }
+  .toggle_btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .toggle_btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 10px;
+  }
+  .toggle_btn span:nth-child(2) {
+    bottom: 10px;
+  }
+  .open .toggle_btn span {
+    background-color: #fff;
+  }
+  .open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(4px) rotate(-45deg);
+    transform: translateY(4px) rotate(-45deg);
+  }
+  .open .toggle_btn span:nth-child(2) {
+    -webkit-transform: translateY(-4px) rotate(45deg);
+    transform: translateY(-4px) rotate(45deg);
+  }
+  #mask {
+    display: none;
+    transition: all 0.5s;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+  }
+</style>

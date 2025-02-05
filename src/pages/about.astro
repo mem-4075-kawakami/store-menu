@@ -1,0 +1,42 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <Header />
+  <main class="wrapper">
+    <div id="about">
+      <p>
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+      <p>
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  #about {
+    padding-top: 80px;
+    padding-left: 40px;
+    max-width: 500px;
+  }
+  #about p {
+    line-height: 1.9;
+    margin-bottom: 30px;
+  }
+</style>

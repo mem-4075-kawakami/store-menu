@@ -1,0 +1,34 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <Header />
+  <main class="wrapper">
+    <ul class="product-list">
+      <li>
+        <a href="item1.html">
+          <img src="/img/item1.jpg" alt="" />
+          <p>プロダクトタイトルプロダクトタイトル</p>
+          <p>&yen;99,999 +tax</p>
+        </a>
+      </li>
+      <li>
+        <a href="item2.html">
+          <img src="/img/item2.jpg" alt="" />
+          <p>プロダクトタイトルプロダクトタイトル</p>
+          <p>&yen;99,999 +tax</p>
+        </a>
+      </li>
+    </ul>
+    <ul class="pagination">
+      <li><a href="products.html">1</a></li>
+      <li>2</li>
+    </ul>
+  </main>
+  <Footer />
+</Layout>

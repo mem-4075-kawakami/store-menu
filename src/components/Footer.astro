@@ -1,9 +1,30 @@
 ---
-
+import "../styles/global.css";
 ---
 
-<footer>
-  <a href="https://www.instagram.com/"></a>
-  <a href="https://x.com/"></a>
-  <a href="https://www.facebook.com/"></a>
+<footer id="footer" class="wrapper">
+  <ul class="menu">
+    <li><a href="https://www.instagram.com/">INSTAGRAM</a></li>
+    <li><a href="https://x.com/">TWITTER</a></li>
+    <li><a href="https://www.facebook.com/">FACEBOOK</a></li>
+  </ul>
+  <p class="copyright">&copy; Furniture Design</p>
 </footer>
+
+<style>
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding-top: 80px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+  }
+  #footer .menu {
+    display: flex;
+  }
+  #footer .menu li {
+    margin-right: 30px;
+  }
+</style>
