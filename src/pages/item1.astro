@@ -1,0 +1,91 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <Header />
+  <body>
+    <div class="wrapper">
+      <h1 class="page-title">プロダクトタイトル</h1>
+      <div id="item">
+        <div class="item-img">
+          <img src="img/item1.jpg" alt="" />
+        </div>
+        <div class="item-text">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+          <p>&yen;99,999 +tax</p>
+          <dl>
+            <dt>SIZE：</dt>
+            <dd>W999 × D999 × H999</dd>
+            <dt>COLOR：</dt>
+            <dd>テキスト</dd>
+            <dt>MATERIAL：</dt>
+            <dd>テキストテキストテキスト</dd>
+          </dl>
+        </div>
+      </div>
+      <a class="link-text" href="products.html">Back To Products</a>
+    </div>
+  </body>
+</Layout>
+<Footer />
+
+<style>
+  #item {
+    margin-left: 60px;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  #item .item-text {
+    width: 42%;
+  }
+  /*
+text-align: justify;
+テキストの両端を揃える
+*/
+  #item .item-text p {
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  #item .item-text dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #item .item-text dt {
+    width: 30%;
+  }
+  #item .item-text dd {
+    width: 70%;
+  }
+  #item .item-img {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 900px) {
+    #item {
+      flex-direction: column;
+    }
+    #item .item-text {
+      width: 100%;
+    }
+    #item .item-img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+</style>

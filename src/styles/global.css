@@ -1,16 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-body{
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
 a {
     color: #333;
     text-decoration: none;
@@ -28,10 +15,9 @@ li {
 
 /* コンテンツ幅の設定 */
 .wrapper {
-    flex-grow: 1; /* 余ったスペースを埋める */
+    flex-grow: 1;
     max-width: 1360px;
     margin: 0 auto;
-    padding: 0 40px;
 }
 
 /* 記事コンテンツ */
@@ -46,14 +32,30 @@ li {
     display: block;
     margin-top: 40px;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
   }
 
 .pagination {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    padding-bottom: 200px;
 }
 .pagination li {
     padding: 0 20px;
+}
+
+.page-title {
+    margin-left: 40px;
+    padding-top: 80px;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  
+
+@media screen and (max-width: 900px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
 }
